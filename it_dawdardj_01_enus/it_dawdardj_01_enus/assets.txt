@@ -1,0 +1,6 @@
+it_dawdardj_01_enus_08	Creating a New Project and Examining Datasets
+it_dawdardj_01_enus_09	Demonstrating and Visualizing Built-in Datasets
+it_dawdardj_01_enus_10	Browsing Package Vignettes
+it_dawdardj_01_enus_11	Reading from CSV Files
+it_dawdardj_01_enus_12	Reading from Text, XML, Excel, and JSON Files
+it_dawdardj_01_enus_13	Writing Data Out to Different File Formats
