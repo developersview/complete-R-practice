@@ -64,6 +64,63 @@ tail(indian.food.csv)
 summary(indian.food.csv)
 tail(indian.food.csv[, c('name', 'diet', 'flavor_profile', 'state')], 10)
 
+##########################################################
+
+mtcars <- read.delim("D:/_DA+DS/07_R/complete-R-practice/3_WorkingWithDatasetInR/Course1/dataset/mtcars.txt", sep = '\t')
+head(mtcars)
+
+#########################################################
+
+install.packages('XML')
+library(XML)
+
+xml.file <- system.file("extdata", "options.xml", package = 'learningr')
+r.options <- xmlParse(xml.file)
+r.options
+
+xpathSApply(r.options, "//variable[contains(@name, 'defaultPackages')]")
+xpathSApply(r.options, "//variable[contains(@name, 'stringsAsFactors')]")
+
+#########################################################
+install.packages('readxl')
+library(readxl)
+
+indian.food.xlsx <- read_excel("D:/_DA+DS/07_R/complete-R-practice/3_WorkingWithDatasetInR/Course1/dataset/indian_food.xlsx")
+names(indian.food.xlsx)
+tail(indian.food.xlsx[, c('name', 'diet', 'flavor_profile', 'state', 'region')])
+
+##########################################################
+install.packages('jsonlite')
+library(jsonlite)
+
+iris.data.json <- fromJSON("D:/_DA+DS/07_R/complete-R-practice/3_WorkingWithDatasetInR/Course1/dataset/iris.json")
+head(iris.data.json, 10)
+
+##########################################################
+mtcars <- read.delim("D:/_DA+DS/07_R/complete-R-practice/3_WorkingWithDatasetInR/Course1/dataset/mtcars.txt", sep = '\t')
+head(mtcars)
+
+save(mtcars, file = './output/mtcars.RData')
+
+write.csv(mtcars, file = './output/mtcars.csv') #american format separated by comma
+write.csv2(mtcars, file = './output/mtcars2.csv') #europian format separated by semicolon
+
+###########################################################
+install.packages('writexl')
+library(writexl)
+
+write_xlsx(mtcars, path = './output/mtcars.xlsx')
+###########################################################
+
+mtcars.json <- toJSON(mtcars, pretty = TRUE)
+mtcars.json
+write(mtcars.json, './output/mtcars.json')
+
+
+
+
+
+
 
 
 
