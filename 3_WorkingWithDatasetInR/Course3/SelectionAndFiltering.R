@@ -178,19 +178,35 @@ bank.churners.filtered <- bank.churners.tbl %>%
 head(bank.churners.filtered)
 
 
+bank.churners.sampled <- bank.churners.tbl %>% sample_n(10, replace = TRUE)
+bank.churners.sampled
+
+bank.churners.sampled <- 
+  bank.churners.tbl %>% 
+  filter(Marital_Status %in% c('single', 'Divorced'), 
+         Income_Category > "$60K - $80K") %>%
+  sample_n(10, replace = FALSE)
+bank.churners.sampled
+
+
+bank.churners.sampled <- 
+  bank.churners.tbl %>% 
+  filter(Income_Category > "Unknown") %>%
+  sample_n(5, replace = FALSE)
+bank.churners.sampled
 
 
 
+bank.churners.topn <- bank.churners.tbl %>%
+  top_n(5, Credit_Limit) %>%
+  select(Gender, Income_Category, Credit_Limit)
+head(bank.churners.topn)
 
 
-
-
-
-
-
-
-
-
+bank.churners.topn <- bank.churners.tbl %>%
+  top_n(5, Total_Revolving_Bal) %>%
+  select(Gender, Income_Category, Total_Revolving_Bal)
+head(bank.churners.topn)
 
 
 
