@@ -1,0 +1,7 @@
+it_dasamrdj_01_enus_05		Sampling and Analyzing Uniform Distribution Data
+it_dasamrdj_01_enus_06		Sampling and Analyzing Binomial Distribution Data
+it_dasamrdj_01_enus_07		Computing Probabilities in Binomial Distributions
+it_dasamrdj_01_enus_08		Sampling and Analyzing Poisson Distribution Data
+it_dasamrdj_01_enus_09		Examining Normal and Exponential Distributions
+it_dasamrdj_01_enus_10		Interpreting QQ Plots Using R
+it_dasamrdj_01_enus_11		Using QQ Plots in R to Compare Datasets
